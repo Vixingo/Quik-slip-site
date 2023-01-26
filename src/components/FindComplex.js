@@ -36,49 +36,56 @@ function FindComplex() {
                 >
                     Enter the exact address or complex name for better accuracy.
                 </Typography>
-                <Paper
-                    component="form"
+                <Box
                     sx={{
-                        display: "flex",
-                        alignItems: "center",
                         margin: "0 auto",
                         maxWidth: "680px",
-                        borderRadius: "16px",
-                        border: "1px solid #186FE7",
                         mt: "48px",
+                        px: "10px",
                     }}
                 >
-                    <IconButton sx={{ p: "12px" }} aria-label="search">
-                        <SearchOutlinedIcon
-                            sx={{
-                                color: "#186FE7",
-                                width: "24px",
-                                height: "24px",
-                            }}
-                        />
-                    </IconButton>
-                    <InputBase
-                        placeholder="Search Apartment Complex or Address"
-                        fullWidth
+                    <Paper
+                        component="form"
                         sx={{
-                            color: "#186FE7",
-                            fontSize: "16px",
-                            border: "none",
-                        }}
-                    />
-                    <Button
-                        variant="contained"
-                        sx={{
-                            margin: "7px 12px",
-                            fontSize: "12px",
-                            textTransform: "unset",
+                            display: "flex",
+                            alignItems: "center",
+
                             borderRadius: "16px",
-                            width: "94px",
+                            border: "1px solid #186FE7",
                         }}
                     >
-                        Search
-                    </Button>
-                </Paper>
+                        <IconButton sx={{ p: "12px" }} aria-label="search">
+                            <SearchOutlinedIcon
+                                sx={{
+                                    color: "#186FE7",
+                                    width: "24px",
+                                    height: "24px",
+                                }}
+                            />
+                        </IconButton>
+                        <InputBase
+                            placeholder="Search Apartment Complex or Address"
+                            fullWidth
+                            sx={{
+                                color: "#186FE7",
+                                fontSize: "16px",
+                                border: "none",
+                            }}
+                        />
+                        <Button
+                            variant="contained"
+                            sx={{
+                                margin: "7px 12px",
+                                fontSize: "12px",
+                                textTransform: "unset",
+                                borderRadius: "16px",
+                                width: "94px",
+                            }}
+                        >
+                            Search
+                        </Button>
+                    </Paper>
+                </Box>
                 <Button
                     variant="outlined"
                     color="neutral"

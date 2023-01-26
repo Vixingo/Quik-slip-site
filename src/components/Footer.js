@@ -68,7 +68,7 @@ function Footer() {
                     <Grid container>
                         {menu.map((data) => {
                             return (
-                                <Grid item md={3}>
+                                <Grid item xs={6} md={3} sx={{ p: "10px" }}>
                                     <Typography
                                         variant="h6"
                                         sx={{ color: "#fff", pb: "8px" }}
@@ -191,7 +191,7 @@ function Footer() {
                         variant="subtitle1"
                         sx={{
                             color: "#C6C6C6",
-                            textAlign: "right",
+                            textAlign: { md: "right", xs: "center" },
                         }}
                     >
                         Privacy Policy · Copyright QuikSlip, 2023

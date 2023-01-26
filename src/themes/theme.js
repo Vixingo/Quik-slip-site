@@ -10,6 +10,9 @@ export const theme = createTheme({
             main: "#fff",
             contrastText: "#fff",
         },
+        management: {
+            main: "#C7C7C7",
+        },
     },
 
     typography: {
