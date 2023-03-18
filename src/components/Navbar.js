@@ -84,7 +84,9 @@ function Navbar(props) {
             <ElevationScroll {...props}>
                 <AppBar
                     position="static"
-                    sx={{ backgroundColor: "transparent" }}
+                    sx={{
+                        backgroundColor: props.bg ? props.bg : "transparent",
+                    }}
                 >
                     <Container maxWidth="xl">
                         <Toolbar disableGutters>
@@ -101,7 +103,11 @@ function Navbar(props) {
                                     display: { xs: "none", lg: "flex" },
                                 }}
                             >
-                                <img src="/img/logo.png" alt="" />
+                                {props.bg ? (
+                                    <img src="/img/logo_black.png" alt="" />
+                                ) : (
+                                    <img src="/img/logo.png" alt="" />
+                                )}
                             </Typography>
 
                             <Box
@@ -118,7 +124,11 @@ function Navbar(props) {
                                     onClick={handleOpenNavMenu}
                                     color="inherit"
                                 >
-                                    <MenuIcon />
+                                    <MenuIcon
+                                        sx={{
+                                            color: props.bg ? "#395789" : "",
+                                        }}
+                                    />
                                 </IconButton>
                                 <Menu
                                     id="menu-appbar"
@@ -143,7 +153,12 @@ function Navbar(props) {
                                             key={page.id}
                                             onClick={handleCloseNavMenu}
                                         >
-                                            <Typography textAlign="center">
+                                            <Typography
+                                                textAlign="center"
+                                                sx={{
+                                                    color: "#344767",
+                                                }}
+                                            >
                                                 {page.title}
                                             </Typography>
                                         </MenuItem>
@@ -176,7 +191,11 @@ function Navbar(props) {
                                     flexGrow: 1,
                                 }}
                             >
-                                <img src="/img/logo.png" alt="" />
+                                {props.bg ? (
+                                    <img src="/img/logo_black.png" alt="" />
+                                ) : (
+                                    <img src="/img/logo.png" alt="" />
+                                )}
                             </Typography>
                             <Box
                                 sx={{
@@ -193,7 +212,9 @@ function Navbar(props) {
                                         onClick={handleCloseNavMenu}
                                         endIcon={page.icon}
                                         sx={{
-                                            color: "white",
+                                            color: props.bg
+                                                ? "#344767"
+                                                : "white",
                                             display: "flex",
                                         }}
                                     >
@@ -203,7 +224,7 @@ function Navbar(props) {
                             </Box>
                             <Stack flexDirection={"row"}>
                                 <Button
-                                    variant="contained"
+                                    variant={props.bg ? "text" : "contained"}
                                     color="management"
                                     sx={{
                                         mr: { xs: "10px", md: "24px" },
@@ -212,7 +233,12 @@ function Navbar(props) {
                                 >
                                     Management Login
                                 </Button>
-                                <Button variant="contained">
+                                <Button
+                                    variant="contained"
+                                    sx={{
+                                        background: props.bg ? "#395789" : "",
+                                    }}
+                                >
                                     Complex Finder{" "}
                                 </Button>
                             </Stack>

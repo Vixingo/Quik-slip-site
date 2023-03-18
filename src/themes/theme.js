@@ -18,7 +18,7 @@ export const theme = createTheme({
     typography: {
         fontFamily: "Arimo",
         h1: {
-            fontSize: "48px",
+            fontSize: "40px",
             lineHeight: "50px",
             fontWeight: "700",
             "@media (max-width:600px)": {
@@ -50,6 +50,9 @@ export const theme = createTheme({
         },
         subtitle1: {
             fontSize: "14px",
+        },
+        subtitle2: {
+            fontSize: "12px",
         },
     },
 });
